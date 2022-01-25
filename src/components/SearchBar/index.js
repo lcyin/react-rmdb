@@ -1,4 +1,5 @@
 import react, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 // useState -> create control component
 // useEffect -> trigger when local state change
 // useRef -> useEffect always trigger in initial render, useRef to avoid useEffect in initial render
@@ -35,6 +36,10 @@ const SearchBar = ({ setSearchTerm }) => {
       </Content>
     </Wrapper>
   );
+};
+
+SearchBar.propTypes = {
+  callBack: PropTypes.func,
 };
 
 export default SearchBar;

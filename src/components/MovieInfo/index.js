@@ -1,4 +1,6 @@
 import react from "react";
+import PropTypes from "prop-types";
+
 import { useParams } from "react-router-dom";
 // config
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
@@ -42,5 +44,9 @@ const MovieInfo = ({ movie }) => (
     </Content>
   </Wrapper>
 );
+
+MovieInfo.propTypes = {
+  movie: PropTypes.object, // shape() for advance configuration
+};
 
 export default MovieInfo;
